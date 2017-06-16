@@ -5,18 +5,24 @@ import {
   Text,
   View
 } from 'react-native';
+import {StackNavigator,} from 'react-navigation';
 
 import Root from './app/Root';
+import User from './app/pages/User';
+import Lessons from './app/pages/Lessons'
+import Learn from './app/pages/Learn'
+import Difficulty from './app/pages/Difficulty'
 
-export default class learn extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Root/>
-      </View>
-    );
-  }
-}
+const App = StackNavigator({
+    Home: { screen: Root },
+    User: { screen: User},
+    Lessons: { screen: Lessons },
+    Learn: { screen: Learn},
+    Difficulty: {screen: Difficulty}
+
+},
+{ headerMode: 'screen' }
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -37,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('learn', () => learn);
+AppRegistry.registerComponent('learn', () => App);

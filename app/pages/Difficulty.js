@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Button, Text, View} from 'react-native'
 
-class HomeScreen extends Component {
+export default class Difficulty extends Component {
   static navigationOptions = {
-    title: 'Welcome',
+    title: 'Choose your difficulty',
   };
   render() {
     const { navigate } = this.props.navigation;
