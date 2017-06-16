@@ -1,6 +1,3 @@
-import {
-  StackNavigator,
-} from 'react-navigation';
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -9,14 +6,12 @@ import {
   View
 } from 'react-native';
 
-import Intro from './pages/Intro'
-
-export default class Root extends Component {
+export default class Intro extends Component {
 	render(){
 		return(
 			<View>
-				<Intro/>
+				<Text> Hi </Text>
 			</View>
-		);
+		)
 	}
 }
