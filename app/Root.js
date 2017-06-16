@@ -7,9 +7,7 @@ import {
   Button
 } from 'react-native';
 
-import Intro from './pages/Intro';
-import User from './pages/User';
-
+import Directory from './pages/Directory'
 
 export default class Root extends Component {
     static navigationOptions = {
@@ -17,13 +15,10 @@ export default class Root extends Component {
         header: null
     };
 	render(){
-        const { navigate } = this.props.navigation;
-		return(
-			<View>
-				<Intro/>
-                <Button onPress={() => navigate("User")}
-                title="Go to user"/>
-			</View>
-		);
+        return(
+            <View>
+                <Directory> </Directory>
+            </View>
+        )
 	}
 }

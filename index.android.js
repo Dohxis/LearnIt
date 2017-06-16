@@ -9,16 +9,20 @@ import {StackNavigator,} from 'react-navigation';
 
 import Root from './app/Root';
 import User from './app/pages/User';
-import Lessons from './app/pages/Lessons'
-import Learn from './app/pages/Learn'
-import Difficulty from './app/pages/Difficulty'
+import Lessons from './app/pages/Lessons';
+import Learn from './app/pages/Learn';
+import Difficulty from './app/pages/Difficulty';
+import Login from './app/pages/Login';
+import Directory from './app/pages/Directory';
 
 const App = StackNavigator({
-    Home: { screen: Root },
+    Home: { screen: Directory },
+    Root: {screen: Root},
     User: { screen: User},
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},
-    Difficulty: {screen: Difficulty}
+    Difficulty: {screen: Difficulty},
+    Login: {screen: Login}
 
 },
 { headerMode: 'screen' }
