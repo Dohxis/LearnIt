@@ -14,6 +14,7 @@ import Learn from './app/pages/Learn';
 import Difficulty from './app/pages/Difficulty';
 import Login from './app/pages/Login';
 import Directory from './app/pages/Directory';
+import Intro from './app/pages/Intro';
 
 const App = StackNavigator({
     Home: { screen: Directory },
@@ -22,7 +23,8 @@ const App = StackNavigator({
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},
     Difficulty: {screen: Difficulty},
-    Login: {screen: Login}
+    Login: {screen: Login},
+    Intro: {screen: Intro},
 
 },
 { headerMode: 'screen' }

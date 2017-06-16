@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
-  Button
+  View
 } from 'react-native';
+
+import {Text, Button} from 'native-base';
 
 export default class Directory extends Component {
     static navigationOptions = {
@@ -16,18 +16,24 @@ export default class Directory extends Component {
 		const { navigate } = this.props.navigation;
 		return(
 			<View>
-                <Button onPress={() => navigate("User")}
-                title="Go to user"/>
-				<Button onPress={() => navigate("Difficulty")}
-                title="Go to Difficulty"/>
-				<Button onPress={() => navigate("Intro")}
-                title="Go to Intro"/>
-				<Button onPress={() => navigate("Learn")}
-                title="Go to Learn"/>
-				<Button onPress={() => navigate("Lessons")}
-                title="Go to Lessons"/>
-				<Button onPress={() => navigate("Login")}
-                title="Go to Login"/>
+                <Button onPress={() => navigate("User")}>
+					<Text> Go to user </Text>
+				</Button>
+				<Button onPress={() => navigate("Difficulty")}>
+				</Button>
+				<Text> Go to Difficulty </Text>
+				<Button onPress={() => navigate("Intro")}>
+					<Text> Go to Intro </Text>
+				</Button>
+				<Button onPress={() => navigate("Learn")}>
+					<Text> Go to Learn </Text>
+				</Button>
+				<Button onPress={() => navigate("Lessons")}>
+					<Text> Go to Lessons </Text>
+				</Button>
+				<Button onPress={() => navigate("Login")}>
+					<Text> Go to Login </Text>
+				</Button>
 			</View>
 		);
 	}
