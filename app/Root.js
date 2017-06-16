@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View,
-  Button
+  View
 } from 'react-native';
 
 import Intro from './pages/Intro';
 import User from './pages/User';
+import { Container, Content, Button, Text } from 'native-base';
 
 
 export default class Root extends Component {
@@ -21,8 +20,7 @@ export default class Root extends Component {
 		return(
 			<View>
 				<Intro/>
-                <Button onPress={() => navigate("User")}
-                title="Go to user"/>
+                <Button primary onPress={() => navigate("User")}><Text>Go to user</Text></Button>
 			</View>
 		);
 	}
