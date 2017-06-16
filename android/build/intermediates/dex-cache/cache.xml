@@ -3,201 +3,201 @@
 
     <item
         is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_60fda3d7db4e54bd2c660f5a7c6cd0ea16db4ba2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_efbe8d165dac9dfb0569d138288ceb79e2faa2d1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_060863321eb250c3cca4bf4a2ba2c7d985335d95.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_e0b2c4abe6873dee48bfff8b95da6d61dabb1674.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_b76d2eb60de2a714fb44959061b37393d249fac8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_518a2319868cec45820a620019f80a6fe358ed00.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_77274f041cd533daad840ff9d5598e9dcdba2fca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_c62c1e25da265dcb34d111ec92b93ebe15886f16.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_8c4ee2f9c29794a22e3d33688a45f936b2f3e122.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_f54df43b2e2d172e94f0803c1d4bb86e29c2ca70.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_d3cca328dd027ca33287601ef8c558ca9ef10bca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_d5021c4cc1ee461ec5367f7725c017f604f11620.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="0d3e48e200296061415952a358fad487e129adaa">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.45.1_00d48c0e245ba5964b7b9a96851b73a47d9263ad.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_2d49a77c734c1be5dcb5710c7cb76b9379bcb85c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_86bd51addbe9677bbbb94da8a3ec55f094ecdc86.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_4a19fd9941b8649b9d1ae697e821e04ca075dbb3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_48856251e83ea6e7533523609117075df997dc6b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/Development/learnit/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_af9bc19d5c47152d58f2019181d30eb2891f73d7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_3f54bb5ddd9cc58e8f74b0fbbcee59e584d2479d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_f9fc57b8b3f3d1980e661ef461adab30d6e75212.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_ec0a6e92afa2cdb63cfc40cd2e9ad73866e3c931.jar" />
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_13202a8b697790a2c5832d7281aae39447fdaed1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/domas/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_a62a27c145c720ecf9bcfb330fd9829e38d07a0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_d74201783237058e88f7d25119482fedc2412371.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_7a618c27187a17ab19209098682a9f19ad749989.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_bf787f45df35e36038004691d4eb39f1bf85b308.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_b4496b13f16376fa3e3ea491f80b7adbdc86edd5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_65a8752867d624758ab3f56efe63fdc98983a104.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.45.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0d3e48e200296061415952a358fad487e129adaa">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.45.1_edd4fae7718913dbbdacd9a1422954beabc9dce4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_c0b706b378eed646a1427e4d5933715e3c39a3f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_02d8eef72885259884c27548ab53a0b688eb6519.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_13cf716a8a5002e2d3093a6770db3621175f303d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_da9a8978f7a8c29f0e35afe6ec120f254c73af66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/domas/Development/learnit/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_064069f72e74ad83372d7dcf5127977f2ad2d269.jar" />
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0_7667527b2e560f09b674baafe521a998b7058895.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_a4dcd3a9fd5ad34d187b99a080204c169c2af02c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_07abe3ae8500957bbeaa32d213fb856ba56d2c0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_5e7f3443fbddff0370d15a5cbce8244ee515d209.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_b211027b977bc3c98439c21d32392dbe4b59b560.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_3f24106b4a424705d36a4688a0f84b8d631ec377.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/Programming/learnit/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_3c64e7fb2279dd5ecb714a69ef9b976174c379b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_d2756ab65d5e2ca575036081d9d7c9f873eb5cc8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_6854a7466ae7985aa8ae8957bb0a829407534383.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ainoras/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/home/ainoras/Programming/learnit/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_ecceb7360d1cc6d3b0e4bf538d605966f4d1148e.jar" />
     </item>
 
 </items>
