@@ -79,15 +79,21 @@ export default class FirstLesson extends Component {
 	//CANCER
 
 	checkNext(){
+
 		this.setState({
 				done: false
 		});
 		this.setState(previousState => {
  			return { progress: previousState.progress + (1/6)}
  		});
-		this.setState(previousState => {
- 			return { id: previousState.id + 1}
- 		});
+		if(this.state.id != 5)
+			this.setState(previousState => {
+ 				return { id: previousState.id + 1}
+ 			});
+
+			 else
+        
+            this.props.navigation.navigate('Lessons');
     }
 
     render(){
@@ -103,7 +109,7 @@ export default class FirstLesson extends Component {
 						<Text style={styles.text}>{randomWords[this.state.id][1]}</Text>
 					</TouchableOpacity>
 			    </View>
-				<View style={{flex: 1.5, flexDirection: 'row'}}>
+				<View style={{flex: 1, flexDirection: 'row'}}>
 					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress3.bind(this)}>
 						<Text style={styles.text}>{randomWords[this.state.id][2]}</Text>
 					</TouchableOpacity>
@@ -127,7 +133,7 @@ const styles = StyleSheet.create({
 		paddingTop: 0
 	},
 	image: {
-		marginBottom: 30,
+		marginBottom: 5,
 		width: win.width,
 		height: 250,
 	},
@@ -143,12 +149,13 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		color: '#fff',
-		fontSize: responsiveFontSize(2.8),
-		fontWeight: "bold"
+		fontSize: responsiveFontSize(2),
+		fontWeight: "bold",
+		width: 170,
+		textAlign: 'center'
 	},
 	buttonRight:{
-		marginRight: 8,
-		marginLeft: 8,
+		margin: 5,
 		width: 170,
 		height: 50,
 		borderRadius: 0,
