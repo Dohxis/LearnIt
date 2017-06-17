@@ -12,15 +12,17 @@ import Difficulty from './app/pages/Difficulty';
 import Login from './app/pages/Login';
 import Directory from './app/pages/Directory';
 import Intro from './app/pages/Intro';
+import SecondLesson from './app/pages/lessons/Second';
 
 const App = StackNavigator({
-    Home: { screen: Login },
+    Home: { screen: SecondLesson },
     User: { screen: User},
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},
     Difficulty: {screen: Difficulty},
     Login: {screen: Login},
     Intro: {screen: Intro},
+    SecondLesson: {screen: SecondLesson},
 }, { headerMode: 'screen' }
 );
 

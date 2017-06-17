@@ -80,7 +80,7 @@ export default class Lessons extends Component {
 				<TouchableOpacity
 				activeOpacity={0.7}
 				style={styles.slideInnerContainer}
-				onPress={() => { alert(`You've clicked`); }}
+				onPress={() => { navigate('SecondLesson'); }}
 				>
 					<View>
 						<View style={styles.imageContainer}>
