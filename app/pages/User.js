@@ -9,6 +9,7 @@ import {
 import { Container, Content, Thumbnail, Text, List, ListItem } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import * as Progress from 'react-native-progress';
+import firebase from '../firebase';
 
 const win = Dimensions.get('window');
 
@@ -52,6 +53,27 @@ class ImagePanel extends Component {
 } 
 
 export default class user extends Component {
+
+	constructor(props){
+		super(props);
+
+		this.state = {streak: 0, points: 0};
+
+		this.guestRef = firebase.database();
+	}
+
+	componentDidMount() {
+		this.guestRef.ref('/points').on('value', (snap) => {
+			this.setState({
+				points: snap.val()
+			});
+		});
+		this.guestRef.ref('/streak').on('value', (snap) => {
+			this.setState({
+				streak: snap.val()
+			});
+		});
+	}
 
 	static navigationOptions = {
         title: 'Guest',
@@ -121,8 +143,8 @@ export default class user extends Component {
 						<View style={{
 						 flexDirection: 'row', justifyContent: 'flex-end'
 					}}>
-							<InfoPanel title={"Taškai"} value={"0"} />
-							<InfoPanel title={"Iš eilės"} value={"0"} />
+							<InfoPanel title={"Taškai"} value={this.state.points} />
+							<InfoPanel title={"Iš eilės"} value={this.state.streak} />
 							</View>
 						
 				</View>

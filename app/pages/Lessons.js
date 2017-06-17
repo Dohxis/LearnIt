@@ -10,6 +10,7 @@ import {
   TouchableOpacity, Button
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
+import firebase from '../firebase';
 
 export default class Lessons extends Component {
 
@@ -17,6 +18,21 @@ export default class Lessons extends Component {
 		title: 'Welcome',
 		header: null
 	};
+
+	constructor(props){
+		super(props);
+		this.state = { task: 0 };
+
+		this.guestRef = firebase.database();
+	}
+
+		componentDidMount() {
+		this.guestRef.ref('/task').on('value', (snap) => {
+			this.setState({
+				task: snap.val()
+			});
+		});
+	}
 
 	render () {
 		const { navigate } = this.props.navigation;
@@ -60,25 +76,6 @@ export default class Lessons extends Component {
 					</View>
 				</TouchableOpacity>
 
-				<TouchableOpacity
-				activeOpacity={0.7}
-				style={styles.slideInnerContainer}
-				onPress={() => { alert(`You've clicked`); }}
-				>
-					<View>
-						<View style={styles.imageContainer}>
-						<Image
-						source={require('../components/img/two.png')}
-						style={styles.image}
-						/>
-						<View style={styles.radiusMask} />
-						</View>
-						<View style={styles.textContainer}>
-						<Text style={styles.title}> HELLO </Text>
-						<Text style={styles.subtitle} numberOfLines={2}>This is a thing</Text>
-						</View>
-					</View>
-				</TouchableOpacity>
 
 				<TouchableOpacity
 				activeOpacity={0.7}
@@ -88,17 +85,19 @@ export default class Lessons extends Component {
 					<View>
 						<View style={styles.imageContainer}>
 						<Image
-						source={require('../components/img/two.png')}
+						source={require('../images/thank.jpg')}
 						style={styles.image}
-						/>
-						<View style={styles.radiusMask} />
-						</View>
+						>
 						<View style={styles.textContainer}>
-						<Text style={styles.title}> HELLO </Text>
-						<Text style={styles.subtitle} numberOfLines={2}>This is a thing</Text>
+						<Text style={styles.title}>Thank you!</Text>
+						<Text style={styles.subtitle} numberOfLines={2}>Šioje pamokoje išmoksime padėkoti savo pašnekovui.</Text>
+						</View>
+						</Image>
+						<View style={styles.radiusMask} />
 						</View>
 					</View>
 				</TouchableOpacity>
+
 
 				<TouchableOpacity
 				activeOpacity={0.7}
@@ -108,61 +107,23 @@ export default class Lessons extends Component {
 					<View>
 						<View style={styles.imageContainer}>
 						<Image
-						source={require('../components/img/two.png')}
+						source={require('../images/goodbye.jpg')}
 						style={styles.image}
-						/>
-						<View style={styles.radiusMask} />
-						</View>
+						>
 						<View style={styles.textContainer}>
-						<Text style={styles.title}> HELLO </Text>
-						<Text style={styles.subtitle} numberOfLines={2}>This is a thing</Text>
+						<Text style={styles.title}>Goodbye!</Text>
+						<Text style={styles.subtitle} numberOfLines={2}>Pirmųjų pamokų ciklą užbaigsime atsisveikindami.</Text>
+						</View>
+						</Image>
+						<View style={styles.radiusMask} />
 						</View>
 					</View>
 				</TouchableOpacity>
 
-				<TouchableOpacity
-				activeOpacity={0.7}
-				style={styles.slideInnerContainer}
-				onPress={() => { alert(`You've clicked`); }}
-				>
-					<View>
-						<View style={styles.imageContainer}>
-						<Image
-						source={require('../components/img/two.png')}
-						style={styles.image}
-						/>
-						<View style={styles.radiusMask} />
-						</View>
-						<View style={styles.textContainer}>
-						<Text style={styles.title}> HELLO </Text>
-						<Text style={styles.subtitle} numberOfLines={2}>This is a thing</Text>
-						</View>
-					</View>
-				</TouchableOpacity>
-
-				<TouchableOpacity
-				activeOpacity={0.7}
-				style={styles.slideInnerContainer}
-				onPress={() => { alert(`You've clicked`); }}
-				>
-					<View>
-						<View style={styles.imageContainer}>
-						<Image
-						source={require('../components/img/two.png')}
-						style={styles.image}
-						/>
-						<View style={styles.radiusMask} />
-						</View>
-						<View style={styles.textContainer}>
-						<Text style={styles.title}> HELLO </Text>
-						<Text style={styles.subtitle} numberOfLines={2}>This is a thing</Text>
-						</View>
-					</View>
-				</TouchableOpacity>
 			</Carousel>
 			<Button 
 			color={"#1a237e"}
-			title={"Guest (0 / 6)"}
+			title={`Guest (${this.state.task} / 6)`}
 			onPress={() => { navigate('User') }} />
 			</View>
        );

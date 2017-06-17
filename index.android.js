@@ -14,8 +14,7 @@ import Directory from './app/pages/Directory';
 import Intro from './app/pages/Intro';
 
 const App = StackNavigator({
-    Home: { screen: Directory },
-    Root: {screen: Root},
+    Home: { screen: Login },
     User: { screen: User},
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},
