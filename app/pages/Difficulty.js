@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Image, Text, View, StyleSheet, Dimensions} from 'react-native';
 import { Container, Content, Button, StyleProvider } from 'native-base';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const win = Dimensions.get('window');
 const styles_ = StyleSheet.create({
@@ -18,10 +19,10 @@ const styles_ = StyleSheet.create({
 	text: {
 			color: 'white',
 			fontWeight: 'bold',
-			fontSize: 38,
+			fontSize: responsiveFontSize(4),
 			marginBottom: 30,
 			width: win.width,
-			marginLeft: win.width/9,
+			textAlign: 'center'
 	},
 });
 

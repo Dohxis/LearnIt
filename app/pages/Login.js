@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 
 import { Container, Content, Button, StyleProvider } from 'native-base';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
+ 
 
 export default class Login extends Component {
     static navigationOptions = {
@@ -15,6 +17,7 @@ export default class Login extends Component {
     };
 	render(){
         const styles = this.props.style;
+        const { navigate } = this.props.navigation;
 		return(
 			<Container>
                 <Image style={styles_.backgroundImage} source={require('../images/login.png')}>
@@ -27,7 +30,7 @@ export default class Login extends Component {
                         </Button>
                     </StyleProvider>
                     <StyleProvider style={buttonTheme}>
-                        <Button full bordered rounded customStyleProp>
+                        <Button full bordered rounded customStyleProp onPress={() => { navigate('Intro') }}>
                             <Text style={{color:'white', flex: 1, paddingTop: 10}}>Tęsti kaip svečias</Text>
                         </Button>
                     </StyleProvider>
@@ -57,18 +60,18 @@ const styles_ = StyleSheet.create({
     text: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 38,
+        fontSize: responsiveFontSize(4),
         
         width: win.width,
-        marginLeft: win.width/9,
+        textAlign: 'center'
     },
     desc: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: responsiveFontSize(1.5),
         
         width: win.width,
-        marginLeft: win.width/4+15,
+        textAlign: 'center',
         marginBottom: 100,
     },
 });

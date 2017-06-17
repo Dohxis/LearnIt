@@ -7,31 +7,56 @@ import {
   Dimensions
 } from 'react-native';
 import { Container, Content, Thumbnail, Text, List, ListItem } from 'native-base';
+import { Col, Row, Grid } from "react-native-easy-grid";
 import * as Progress from 'react-native-progress';
 
-export default class user extends Component {
-	constructor(props){
-		super(props);
-		this.state = {progress: 0};
+const win = Dimensions.get('window');
 
-        this.setState(previousState => {
-            return { progress: 0}
-        });
-
-		setTimeout(() => {
-			if(this.state.progess != 0.65){
-				this.setState(previousState => {
-					return { progress: 0.65}
-				});
-			}
-		}, 1000);
+class InfoPanel extends Component {
+	render(){
+		return (
+			<Col>
+				<Text style={{
+						backgroundColor: '#E0E0E0',
+						margin: 10,
+						padding: 10,
+						textAlign: 'center',
+						borderRadius: 5
+					}}
+				>
+					<Text style={{color: '#424242'}}>{this.props.title}</Text>{"\n"}
+					<Text style={{ fontWeight: 'bold', fontSize: 22, color: '#424242' }}>{this.props.value}</Text>
+				</Text>
+			</Col>
+		);
 	}
+} 
+
+class ImagePanel extends Component {
+	render(){
+		return (
+			<Col>
+				<Image style={{
+						backgroundColor: '#E0E0E0',
+						margin: 10,
+						padding: 10,
+						textAlign: 'center',
+						borderRadius: 5
+					}}
+					source={require(this.props.image)}
+				/>
+			</Col>
+		);
+	}
+} 
+
+export default class user extends Component {
 
 	static navigationOptions = {
         title: 'Guest',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#FF9800',
+			backgroundColor: '#EF6C00',
 		},
 		headerTitleStyle: {
 			color: '#FFFFFF',
@@ -44,28 +69,66 @@ export default class user extends Component {
             <View>
 				<View style={styles.center}>
 	                <Image style={styles.image} source={require('../components/img/two.png')} >
-						<Progress.Bar style={styles.progress} progress={this.state.progress}
-                        width={win.width} height={10} borderRadius = {0}
-                        borderWidth = {0} animate={true}/>
 					</Image>
 				</View>
 				<View>
-                    <List>
-                        <ListItem>
-                            <Text style={styles.text}>Level: 5</Text>
-                            <Text style={styles.text}>                                              1550/3200 xp </Text>
-                        </ListItem>
-                        <ListItem>
-                            <Text>Level:</Text>
-                        </ListItem>
-                    </List>
+					<Text style={{
+						width: '95%',
+						marginLeft: 10,
+						marginRight: 10,
+						borderBottomColor: '#9E9E9E',
+						borderBottomWidth: 1,
+						color: '#616161',
+						marginBottom: 5
+					}}>Pasiekimai</Text>
+					<Grid>
+						<Row>
+							<Image style={{
+								width: 90,
+								height:  120,
+								resizeMode: 'stretch',
+								
+								}}
+								source={require('../images/first_.png')}
+							/>
+							<Image style={{
+								width: 90,
+								height:  120,
+								resizeMode: 'stretch',
+								
+								}}
+								source={require('../images/some_.png')}
+							/>
+							<Image style={{
+								width: 90,
+								height:  120,
+								resizeMode: 'stretch',
+								
+								}}
+								source={require('../images/flag_.png')}
+							/>
+							<Image style={{
+								width: 90,
+								height:  120,
+								resizeMode: 'stretch',
+								
+								}}
+								source={require('../images/trophy_.png')}
+							/>
+						</Row>
+						<Text style={{marginBottom: 80}}>{"\n"}</Text>
+						<Row>
+							<InfoPanel title={"Taškai"} value={"0"} />
+							<InfoPanel title={"Iš eilės"} value={"0"} />
+						</Row>
+					</Grid>
 				</View>
             </View>
         );
     }
 }
 
-const win = Dimensions.get('window');
+
 const styles = StyleSheet.create({
 	center: {
       	justifyContent: 'center',
@@ -73,10 +136,10 @@ const styles = StyleSheet.create({
     },
 	image: {
 		width: win.width,
-  	  	height: 300,
+  	  	height: 265,
 	},
 	progress: {
-		marginTop: 290
+		marginTop: 300
 	},
     align: {
         alignItems: 'flex-end',
