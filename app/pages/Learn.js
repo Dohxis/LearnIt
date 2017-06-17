@@ -3,7 +3,7 @@ import {Image, Text, View, StyleSheet, Dimensions, Alert} from 'react-native';
 import { Container, Content, Button, StyleProvider } from 'native-base';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 import * as Progress from 'react-native-progress';
-
+​
 const win = Dimensions.get('window');
 const styles = StyleSheet.create({
 	background: {
@@ -22,16 +22,13 @@ const styles = StyleSheet.create({
 			color: 'white',
 			fontWeight: 'bold',
 			fontSize: responsiveFontSize(4),
-<<<<<<< HEAD
-			marginTop: 10,
-			marginBottom: 30,
-=======
+			
 			marginTop: 0,
 			marginBottom: 0,
 			paddingTop: 0,
 			paddingBottom: 0,
 			justifyContent: "center",
->>>>>>> 0b333ffa7b533cfe1ee38f10ff5a9544f8a23d0d
+
 			width: win.width,
 			textAlign: 'center',
 			backgroundColor: '#D84315'
@@ -63,7 +60,8 @@ const buttonTheme = {
 			marginBottom: 5
 		}
 };
-
+​
+​
 
 const noButtonTheme = {
 		'NativeBase.Button': {
@@ -78,7 +76,8 @@ const noButtonTheme = {
 			marginBottom: 5
 		}
 };
-
+​
+​
 
 export default class Learn extends Component {
 
