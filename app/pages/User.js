@@ -19,6 +19,7 @@ class InfoPanel extends Component {
 				<Text style={{
 						backgroundColor: '#E0E0E0',
 						margin: 10,
+						marginRight: 5,
 						padding: 10,
 						textAlign: 'center',
 						borderRadius: 5
@@ -56,7 +57,7 @@ export default class user extends Component {
         title: 'Guest',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#EF6C00',
+			backgroundColor: '#1a237e',
 		},
 		headerTitleStyle: {
 			color: '#FFFFFF',
@@ -66,7 +67,7 @@ export default class user extends Component {
 	};
 	render() {
         return (
-            <View>
+			<View style={{backgroundColor: '#1d1b25'}}>
 				<View style={styles.center}>
 	                <Image style={styles.image} source={require('../components/img/two.png')} >
 					</Image>
@@ -76,18 +77,18 @@ export default class user extends Component {
 						width: '95%',
 						marginLeft: 10,
 						marginRight: 10,
-						borderBottomColor: '#9E9E9E',
+						borderBottomColor: '#E0E0E0',
 						borderBottomWidth: 1,
-						color: '#616161',
-						marginBottom: 5
+						color: '#E0E0E0',
+						marginBottom: 5,
 					}}>Pasiekimai</Text>
-					<Grid>
-						<Row>
+					<View style={{
+						 flexDirection: 'row', justifyContent: 'flex-end', flex: 1
+					}}>
 							<Image style={{
 								width: 90,
 								height:  120,
-								resizeMode: 'stretch',
-								
+								resizeMode: 'stretch'
 								}}
 								source={require('../images/first_.png')}
 							/>
@@ -115,15 +116,17 @@ export default class user extends Component {
 								}}
 								source={require('../images/trophy_.png')}
 							/>
-						</Row>
+						</View>
 						<Text style={{marginBottom: 80}}>{"\n"}</Text>
-						<Row>
+						<View style={{
+						 flexDirection: 'row', justifyContent: 'flex-end'
+					}}>
 							<InfoPanel title={"Taškai"} value={"0"} />
 							<InfoPanel title={"Iš eilės"} value={"0"} />
-						</Row>
-					</Grid>
+							</View>
+						
 				</View>
-            </View>
+			</View>
         );
     }
 }
@@ -137,6 +140,7 @@ const styles = StyleSheet.create({
 	image: {
 		width: win.width,
   	  	height: 265,
+		resizeMode: 'stretch'
 	},
 	progress: {
 		marginTop: 300
