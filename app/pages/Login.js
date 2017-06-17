@@ -15,6 +15,7 @@ export default class Login extends Component {
     };
 	render(){
         const styles = this.props.style;
+        const { navigate } = this.props.navigation;
 		return(
 			<Container>
                 <Image style={styles_.backgroundImage} source={require('../images/login.png')}>
@@ -27,7 +28,7 @@ export default class Login extends Component {
                         </Button>
                     </StyleProvider>
                     <StyleProvider style={buttonTheme}>
-                        <Button full bordered rounded customStyleProp>
+                        <Button full bordered rounded customStyleProp onPress={() => { navigate('Intro') }}>
                             <Text style={{color:'white', flex: 1, paddingTop: 10}}>Tęsti kaip svečias</Text>
                         </Button>
                     </StyleProvider>
