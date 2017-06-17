@@ -22,16 +22,11 @@ const styles = StyleSheet.create({
 			color: 'white',
 			fontWeight: 'bold',
 			fontSize: responsiveFontSize(4),
-<<<<<<< HEAD
-			marginTop: 10,
-			marginBottom: 30,
-=======
 			marginTop: 0,
 			marginBottom: 0,
 			paddingTop: 0,
 			paddingBottom: 0,
 			justifyContent: "center",
->>>>>>> 0b333ffa7b533cfe1ee38f10ff5a9544f8a23d0d
 			width: win.width,
 			textAlign: 'center',
 			backgroundColor: '#D84315'
