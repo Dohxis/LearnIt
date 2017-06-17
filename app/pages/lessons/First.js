@@ -15,11 +15,11 @@ import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
 const randomWords = [
 		['Iki', 'Gamta', 'Labas', 'HackerGames'],
-		['Viso', 'Kelionė', 'Gerai', 'Miestas'],
+		['Iki', 'Kelionė', 'Gerai', 'Miestas'],
 		['Žmogus', 'Aš', 'Moteris', 'Nuotaka'],
 		['Nuotrauka', 'Žmogus', 'Labas', 'Tu'],
-		['Viso', 'Kelionė', 'Gerai', 'Miestas'],
-		['Viso', 'Kelionė', 'Gerai', 'Miestas']
+		['Herbas', 'Vyras', 'Vizitinė', 'Vardas'],
+		['Ačiū', 'Karas', 'Aš', 'Moteris']
 ];
 
 export default class FirstLesson extends Component {
@@ -42,37 +42,73 @@ export default class FirstLesson extends Component {
 
     };
 
-	_onPress() {
-	  	this.setState({
-				done: true
+	//CANCER -- NEBUVO LAIKO, NEPYKIT POTENCIALUS DARBDAVIAI
+
+	_onPress1() {
+		if(randomWords[this.state.id][0] == words[this.state.id].lt){
+		  	this.setState({
+					done: true
+			});
+		}
+  	};
+
+	_onPress2() {
+		if(randomWords[this.state.id][1] == words[this.state.id].lt){
+		  	this.setState({
+					done: true
+			});
+		}
+	};
+
+	_onPress3() {
+		if(randomWords[this.state.id][2] == words[this.state.id].lt){
+		  	this.setState({
+					done: true
+			});
+		}
+  	};
+
+	_onPress4() {
+		if(randomWords[this.state.id][3] == words[this.state.id].lt){
+		  	this.setState({
+					done: true
+			});
+		}
+  	};
+
+	//CANCER
+
+	checkNext(){
+		this.setState({
+				done: false
 		});
 		this.setState(previousState => {
- 			return { progress: previousState.progress + (0.01)}
+ 			return { progress: previousState.progress + (1/6)}
  		});
 		this.setState(previousState => {
- 			return { progress: previousState.id + 1}
+ 			return { id: previousState.id + 1}
  		});
-  	};
+    }
 
     render(){
         return (
-            <Learn title="Pasirink" progress={this.state.progress} done={this.state.done}>
+            <Learn fun={this.checkNext.bind(this)} title="Pasirink" progress={this.state.progress} done={this.state.done}>
                 <Text style={styles.name}> {words[this.state.id].en.toUpperCase()} </Text>
 				<Image style={styles.image} source={words[this.state.id].image}/>
 				<View style={{flex: 1, flexDirection: 'row'}}>
-					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
-						<Text style={styles.text}>Iki</Text>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress1.bind(this)}>
+						<Text style={styles.text}>{randomWords[this.state.id][0]}</Text>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
-						<Text style={styles.text}>Gamta</Text>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress2.bind(this)}>
+						<Text style={styles.text}>{randomWords[this.state.id][1]}</Text>
 					</TouchableOpacity>
 			    </View>
 				<View style={{flex: 1.5, flexDirection: 'row'}}>
-					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
-						<Text style={styles.text}>Sveiki</Text>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress3.bind(this)}>
+						<Text style={styles.text}>{randomWords[this.state.id][2]}</Text>
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
-						<Text style={styles.text}>Hacker GAMES</Text>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress4.bind(this)}>
+						<Text style={styles.text}>{randomWords[this.state.id][3]}</Text>
 					</TouchableOpacity>
 				</View>
             </Learn>
