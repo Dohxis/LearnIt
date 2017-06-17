@@ -1,13 +1,13 @@
 const words = [
     {
         id: 0,
-        en: "hello",
+        en: "hi",
         lt: "labas",
         image: require('./0.png'),
     },
     {
         id: 1,
-        en: "goodbye",
+        en: "bye",
         lt: "viso gero",
         image: require('./1.png'),
     },

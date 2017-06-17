@@ -16,7 +16,7 @@ import SecondLesson from './app/pages/lessons/Second';
 import FirstLesson from './app/pages/lessons/First'
 
 const App = StackNavigator({
-    Home: { screen: FirstLesson },
+    Home: { screen: SecondLesson },
     User: { screen: User},
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},

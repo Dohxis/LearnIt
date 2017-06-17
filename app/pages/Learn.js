@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 			color: 'white',
 			fontWeight: 'bold',
 			fontSize: responsiveFontSize(4),
-			marginTop: 20,
+			marginTop: 10,
 			marginBottom: 30,
 			width: win.width,
 			textAlign: 'center'
@@ -85,9 +85,6 @@ export default class Learn extends Component {
 							width={win.width} height={10} borderRadius = {0}
 							borderWidth = {0} animate={false} color='green'
 						/>
-						<View ref="myRef">
-							<Text style={{color: '#1d1b25'}}> {this.props.progress} </Text>
-						</View>
 						
 						<Text style={styles.name}>{this.props.title}</Text>
 					</View>
@@ -95,8 +92,8 @@ export default class Learn extends Component {
 					{this.props.children}
 					
 					<StyleProvider style={(!this.props.done) ? noButtonTheme : buttonTheme}>
-						<Button full onPress={() => alert('hi')} disabled={!this.props.done}>
-							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Tęsti</Text>
+						<Button full onPress={() => this.props.fun()} disabled={!this.props.done}>
+							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Toliau</Text>
 						</Button>
 					</StyleProvider>
 				</View> 
