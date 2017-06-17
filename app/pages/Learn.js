@@ -22,10 +22,14 @@ const styles = StyleSheet.create({
 			color: 'white',
 			fontWeight: 'bold',
 			fontSize: responsiveFontSize(4),
-			marginTop: 20,
-			marginBottom: 30,
+			marginTop: 0,
+			marginBottom: 0,
+			paddingTop: 0,
+			paddingBottom: 0,
+			justifyContent: "center",
 			width: win.width,
-			textAlign: 'center'
+			textAlign: 'center',
+			backgroundColor: '#D84315'
 	},
 	buttonText: {
 		color:'white',
@@ -34,7 +38,7 @@ const styles = StyleSheet.create({
 		fontSize: 20
 	},
 	noButtonText: {
-		color:'#1d1b25',
+		color:'#9E9E9E',
 		flex: 1,
 		paddingTop: 10,
 		fontSize: 20
@@ -45,7 +49,7 @@ const buttonTheme = {
 		'NativeBase.Button': {
 			bottom: 10,
 			width: win.width - 40,
-			height: 60, 
+			height: 60,
 			justifyContent: 'center',
 			alignItems: 'center',
 			paddingTop: 5,
@@ -60,12 +64,12 @@ const noButtonTheme = {
 		'NativeBase.Button': {
 			bottom: 10,
 			width: win.width - 40,
-			height: 60, 
+			height: 60,
 			justifyContent: 'center',
 			alignItems: 'center',
 			paddingTop: 5,
 			borderColor: '#1d1b25',
-			backgroundColor: '#1d1b25',
+			backgroundColor: '#424242',
 			marginBottom: 5
 		}
 };
@@ -85,21 +89,18 @@ export default class Learn extends Component {
 							width={win.width} height={10} borderRadius = {0}
 							borderWidth = {0} animate={false} color='green'
 						/>
-						<View ref="myRef">
-							<Text style={{color: '#1d1b25'}}> {this.props.progress} </Text>
-						</View>
-						
+
 						<Text style={styles.name}>{this.props.title}</Text>
 					</View>
-					
+
 					{this.props.children}
-					
+
 					<StyleProvider style={(!this.props.done) ? noButtonTheme : buttonTheme}>
 						<Button full onPress={() => alert('hi')} disabled={!this.props.done}>
 							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Tęsti</Text>
 						</Button>
 					</StyleProvider>
-				</View> 
+				</View>
 			</Container>
 		);
 	}

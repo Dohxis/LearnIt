@@ -7,10 +7,12 @@ import {
   Dimensions,
   Image,
   ScrollView,
-  TouchableOpacity, Button
+  TouchableOpacity
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import firebase from '../firebase';
+import { Container, Content, Button, Icon, Fab } from 'native-base';
+
 
 export default class Lessons extends Component {
 
@@ -21,7 +23,7 @@ export default class Lessons extends Component {
 
 	constructor(props){
 		super(props);
-		this.state = { task: 0 };
+		this.state = { task: 0, active: false };
 
 		this.guestRef = firebase.database();
 	}
@@ -54,7 +56,6 @@ export default class Lessons extends Component {
 				snapOnAndroid={true}
 				removeClippedSubviews={false}
 				>
-
 				<TouchableOpacity
 				activeOpacity={0.7}
 				style={styles.slideInnerContainer}
@@ -121,29 +122,34 @@ export default class Lessons extends Component {
 				</TouchableOpacity>
 
 			</Carousel>
-			<Button 
-			color={"#1a237e"}
-			title={`Guest (${this.state.task} / 6)`}
-			onPress={() => { navigate('User') }} />
+				<Fab
+	            active={this.state.active}
+	            direction="left"
+	            containerStyle={{ marginLeft: 10 }}
+	            style={{ backgroundColor: '#D84315'}}
+	            position="bottomRight"
+	            onPress={() => navigate("User")}>
+					<Icon style={{fontSize: 27, }} name="person" />
+	            </Fab>
 			</View>
        );
    }
 }
 
-const horizontalMargin = 20;
-const slideWidth = 280;
+const horizontalMargin = 5;
+const slideWidth = 320;
 
 function wp (percentage) {
     const value = (percentage * Dimensions.get('window').width) / 100;
     return Math.round(value);
 }
 
+const win = Dimensions.get('window');
 const sliderWidth = Dimensions.get('window').width;
 const itemWidth = slideWidth;
-const itemHeight = 200;
-const slideHeight = 400;
-const win = Dimensions.get('window');
-const itemHorizontalMargin = wp(2);
+const itemHeight = win.height;
+const slideHeight = win.height - 50;
+const itemHorizontalMargin = 0;
 const entryBorderRadius = 0;
 
 const colors = {
@@ -156,16 +162,16 @@ const colors = {
 const styles = StyleSheet.create({
 	    slideInnerContainer: {
 	        width: itemWidth,
-	        height: 500,
+	        height: slideHeight,
 	        paddingHorizontal: itemHorizontalMargin,
 	        paddingBottom: 0, // needed for shadow
-			marginTop: 10
+			marginTop: 12,
 	    },
 	    imageContainer: {
 	        flex: 0,
 	        backgroundColor: 'white',
 	        borderTopLeftRadius: entryBorderRadius,
-	        borderTopRightRadius: entryBorderRadius
+	        borderTopRightRadius: entryBorderRadius,
 	    },
 	    imageContainerEven: {
 	        backgroundColor: colors.black
@@ -176,7 +182,7 @@ const styles = StyleSheet.create({
 	        borderTopLeftRadius: entryBorderRadius,
 	        borderTopRightRadius: entryBorderRadius,
 			width: itemWidth,
-	  	  	height: 500,
+	  	  	height: itemHeight,
 	    },
 	    // image's border radius is buggy on ios; let's hack it!
 	    radiusMask: {
@@ -191,21 +197,22 @@ const styles = StyleSheet.create({
 	        backgroundColor: colors.black
 	    },
 	    textContainer: {
-	        justifyContent: 'center',
+			flex: 0,
 	        paddingTop: 20 - entryBorderRadius,
-	        paddingBottom: 20,
+	        paddingBottom: 120,
+			bottom: 20,
 	        paddingHorizontal: 16,
 	        backgroundColor: 'rgba(0, 0, 0, 0.5)',
 	        borderBottomLeftRadius: entryBorderRadius,
 	        borderBottomRightRadius: entryBorderRadius,
-			marginTop: 400
+			marginTop: slideHeight - 160
 	    },
 	    textContainerEven: {
 	        backgroundColor: colors.black
 	    },
 	    title: {
 	        color: 'white',
-	        fontSize: 20,
+	        fontSize: 30,
 	        fontWeight: 'bold',
 	        letterSpacing: 0.5
 	    },
@@ -214,11 +221,11 @@ const styles = StyleSheet.create({
 	    },
 	    subtitle: {
 	        marginTop: 0,
-	        color: colors.gray,
-	        fontSize: 12,
+	        color: '#BBBBBB',
+	        fontSize: 20,
 	        fontStyle: 'italic'
 	    },
 	    subtitleEven: {
 	        color: 'rgba(255, 255, 255, 0.7)'
-	    }
+	    },
 });

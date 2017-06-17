@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
 
 
 export default class Intro extends Component {
-	
+
 	static navigationOptions = {
 		title: 'Welcome',
 		header: null
 	};
-	
+
 	onSkipBtnHandle = (index) => {
 		this.props.navigation.navigate('Difficulty');
 	}
@@ -56,7 +56,7 @@ export default class Intro extends Component {
 		this.props.navigation.navigate('Difficulty');
 	}
 	render(){
-		
+
 		return (
 			<AppIntro
 				onNextBtnClick={this.nextBtnHandle}
@@ -67,7 +67,7 @@ export default class Intro extends Component {
 				skipBtnLabel='Praleisti'
 				customStyles={{ controllText: { fontSize: responsiveFontSize(1.5) } }}
 			>
-			<View style={[styles.slide,{ backgroundColor: '#880e4f' }]}>
+			<View style={[styles.slide,{ backgroundColor: '#D84315' }]}>
 				<Image style={styles.image} source={require('../images/happy2.png')} />
 				<View level={10}><Text style={styles.name}>Sveikiname!</Text></View>
 				<View level={10}><Text style={styles.text}>Jūs žengėte pirmą žingsnį tobulėjimo link. Šis trumpas gidas supažindins Jus su šia programėle.</Text></View>
