@@ -85,9 +85,14 @@ export default class FirstLesson extends Component {
 		this.setState(previousState => {
  			return { progress: previousState.progress + (1/6)}
  		});
-		this.setState(previousState => {
- 			return { id: previousState.id + 1}
- 		});
+		if(this.state.id < 5){
+			this.setState(previousState => {
+ 				return { id: previousState.id + 1}
+ 			});
+		}
+		else{
+			this.props.navigation.navigate('Success')
+		}
     }
 
     render(){

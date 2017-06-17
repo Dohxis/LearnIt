@@ -13,10 +13,11 @@ import Login from './app/pages/Login';
 import Directory from './app/pages/Directory';
 import Intro from './app/pages/Intro';
 import SecondLesson from './app/pages/lessons/Second';
-import FirstLesson from './app/pages/lessons/First'
+import FirstLesson from './app/pages/lessons/First';
+import Success from './app/pages/Success';
 
 const App = StackNavigator({
-    Home: { screen: FirstLesson},
+    Home: { screen: Login},
     User: { screen: User},
     Lessons: { screen: Lessons },
     Learn: { screen: Learn},
@@ -25,6 +26,7 @@ const App = StackNavigator({
     Intro: {screen: Intro},
 	FirstLesson: {screen: FirstLesson},
     SecondLesson: {screen: SecondLesson},
+	Success: {screen: Success}
 }, { headerMode: 'screen' }
 );
 
