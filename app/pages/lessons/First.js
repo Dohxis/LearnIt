@@ -6,14 +6,23 @@ import {
   Dimensions,
   Image,
   Button,
-  Alert
+  Alert,
+  TouchableOpacity
 } from 'react-native';
 import Learn from '../Learn';
 import words from './words';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
-export default class FirstLesson extends Component {
+const randomWords = [
+		['Iki', 'Gamta', 'Labas', 'HackerGames'],
+		['Viso', 'Kelionė', 'Gerai', 'Miestas'],
+		['Žmogus', 'Aš', 'Moteris', 'Nuotaka'],
+		['Nuotrauka', 'Žmogus', 'Labas', 'Tu'],
+		['Viso', 'Kelionė', 'Gerai', 'Miestas'],
+		['Viso', 'Kelionė', 'Gerai', 'Miestas']
+];
 
+export default class FirstLesson extends Component {
     static navigationOptions = {
 		header: null
 	};
@@ -34,29 +43,37 @@ export default class FirstLesson extends Component {
     };
 
 	_onPress() {
-	  Alert.alert('on Press!');
-  };
+	  	this.setState({
+				done: true
+		});
+		this.setState(previousState => {
+ 			return { progress: previousState.progress + (0.01)}
+ 		});
+		this.setState(previousState => {
+ 			return { progress: previousState.id + 1}
+ 		});
+  	};
 
     render(){
         return (
-            <Learn title="Sudėliok" progress={this.state.progress} done={this.state.done}>
+            <Learn title="Pasirink" progress={this.state.progress} done={this.state.done}>
                 <Text style={styles.name}> {words[this.state.id].en.toUpperCase()} </Text>
 				<Image style={styles.image} source={words[this.state.id].image}/>
 				<View style={{flex: 1, flexDirection: 'row'}}>
-					<View style={styles.buttonRight}>
-						<Button height={50} title="Hello" onPress={this._onPress}/>
-					</View>
-					<View style={styles.buttonRight}>
-						<Button title="Hello" onPress={this._onPress}/>
-					</View>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
+						<Text style={styles.text}>Iki</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
+						<Text style={styles.text}>Gamta</Text>
+					</TouchableOpacity>
 			    </View>
-				<View style={{flex: 1, flexDirection: 'row'}}>
-					<View style={styles.buttonRight}>
-						<Button title="Hello" onPress={this._onPress}/>
-					</View>
-					<View style={styles.buttonRight}>
-						<Button title="Hello" onPress={this._onPress}/>
-					</View>
+				<View style={{flex: 1.5, flexDirection: 'row'}}>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
+						<Text style={styles.text}>Sveiki</Text>
+					</TouchableOpacity>
+					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress.bind(this)}>
+						<Text style={styles.text}>Hacker GAMES</Text>
+					</TouchableOpacity>
 				</View>
             </Learn>
         );
@@ -74,29 +91,35 @@ const styles = StyleSheet.create({
 		paddingTop: 0
 	},
 	image: {
-		marginBottom: 15,
-		width: 250,
+		marginBottom: 30,
+		width: win.width,
 		height: 250,
 	},
 	name: {
 		color: '#fff',
 		fontSize: responsiveFontSize(3.8),
 		fontWeight: 'bold',
-		bottom: 5,
 		width: win.width,
-		textAlign: 'center'
+		textAlign: 'center',
+		backgroundColor: "#F4511E",
+		paddingTop: 10,
+		paddingBottom: 10
 	},
 	text: {
 		color: '#fff',
-		fontSize: responsiveFontSize(1.8),
-		textAlign: 'justify',
-		width: win.width - 40,
+		fontSize: responsiveFontSize(2.8),
+		fontWeight: "bold"
 	},
 	buttonRight:{
-		marginRight: 20,
-		marginLeft: 20,
-		width: 105,
+		marginRight: 8,
+		marginLeft: 8,
+		width: 170,
 		height: 50,
-		borderRadius: 100,
+		borderRadius: 0,
+		borderWidth: 0,
+		backgroundColor: "#D84315",
+		borderColor: "#000000",
+		alignItems: "center",
+		justifyContent: "center"
 	}
 });

@@ -32,7 +32,7 @@ class InfoPanel extends Component {
 			</Col>
 		);
 	}
-} 
+}
 
 class ImagePanel extends Component {
 	render(){
@@ -50,7 +50,7 @@ class ImagePanel extends Component {
 			</Col>
 		);
 	}
-} 
+}
 
 export default class user extends Component {
 
@@ -79,7 +79,7 @@ export default class user extends Component {
         title: 'Guest',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#1a237e',
+			backgroundColor: '#D84315',
 		},
 		headerTitleStyle: {
 			color: '#FFFFFF',
@@ -118,7 +118,7 @@ export default class user extends Component {
 								width: 90,
 								height:  120,
 								resizeMode: 'stretch',
-								
+
 								}}
 								source={require('../images/some_.png')}
 							/>
@@ -126,7 +126,7 @@ export default class user extends Component {
 								width: 90,
 								height:  120,
 								resizeMode: 'stretch',
-								
+
 								}}
 								source={require('../images/flag_.png')}
 							/>
@@ -134,7 +134,7 @@ export default class user extends Component {
 								width: 90,
 								height:  120,
 								resizeMode: 'stretch',
-								
+
 								}}
 								source={require('../images/trophy_.png')}
 							/>
@@ -146,7 +146,7 @@ export default class user extends Component {
 							<InfoPanel title={"Taškai"} value={this.state.points} />
 							<InfoPanel title={"Iš eilės"} value={this.state.streak} />
 							</View>
-						
+
 				</View>
 			</View>
         );
@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
       	alignItems: 'center',
     },
 	image: {
-		width: win.width,
-  	  	height: 265,
+		width: win.width + 45,
+  	  	height: 337,
 		resizeMode: 'stretch'
 	},
 	progress: {
