@@ -1,39 +1,39 @@
 const words = [
     {
-        id: 1,
+        id: 0,
         en: "hello",
         lt: "labas",
-        image: require('./greet.jpg'),
+        image: require('./0.png'),
+    },
+    {
+        id: 1,
+        en: "goodbye",
+        lt: "viso gero",
+        image: require('./1.png'),
     },
     {
         id: 2,
-        en: "goodbye",
-        lt: "viso gero",
-        image: require('./greet.jpg'),
+        en: "thank you",
+        lt: "ačiū",
+        image: require('./2.png'),
     },
     {
         id: 3,
-        en: "thank you",
-        lt: "ačiū",
-        image: require('./greet.jpg'),
+        en: "I",
+        lt: "aš",
+        image: require('./3.png'),
     },
     {
         id: 4,
-        en: "I",
-        lt: "aš",
-        image: require('./greet.jpg'),
+        en: "name",
+        lt: "vardas",
+        image: require('./4.png'),
     },
     {
         id: 5,
-        en: "name",
-        lt: "vardas",
-        image: require('./greet.jpg'),
-    },
-    {
-        id: 6,
         en: "you",
         lt: "tu",
-        image: require('./greet.jpg'),
+        image: require('./5.png'),
     }
 ];
 
