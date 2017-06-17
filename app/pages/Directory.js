@@ -20,8 +20,8 @@ export default class Directory extends Component {
 					<Text> Go to user </Text>
 				</Button>
 				<Button onPress={() => navigate("Difficulty")}>
+					<Text> Go to Difficulty </Text>
 				</Button>
-				<Text> Go to Difficulty </Text>
 				<Button onPress={() => navigate("Intro")}>
 					<Text> Go to Intro </Text>
 				</Button>
