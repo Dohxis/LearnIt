@@ -9,6 +9,7 @@ import {
 import { Container, Content, Thumbnail, Text, List, ListItem } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import * as Progress from 'react-native-progress';
+import firebase from '../firebase';
 
 const win = Dimensions.get('window');
 
@@ -19,6 +20,7 @@ class InfoPanel extends Component {
 				<Text style={{
 						backgroundColor: '#E0E0E0',
 						margin: 10,
+						marginRight: 5,
 						padding: 10,
 						textAlign: 'center',
 						borderRadius: 5
@@ -52,11 +54,32 @@ class ImagePanel extends Component {
 
 export default class user extends Component {
 
+	constructor(props){
+		super(props);
+
+		this.state = {streak: 0, points: 0};
+
+		this.guestRef = firebase.database();
+	}
+
+	componentDidMount() {
+		this.guestRef.ref('/points').on('value', (snap) => {
+			this.setState({
+				points: snap.val()
+			});
+		});
+		this.guestRef.ref('/streak').on('value', (snap) => {
+			this.setState({
+				streak: snap.val()
+			});
+		});
+	}
+
 	static navigationOptions = {
         title: 'Guest',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#EF6C00',
+			backgroundColor: '#1a237e',
 		},
 		headerTitleStyle: {
 			color: '#FFFFFF',
@@ -66,7 +89,7 @@ export default class user extends Component {
 	};
 	render() {
         return (
-            <View>
+			<View style={{backgroundColor: '#1d1b25'}}>
 				<View style={styles.center}>
 	                <Image style={styles.image} source={require('../components/img/two.png')} >
 					</Image>
@@ -76,18 +99,18 @@ export default class user extends Component {
 						width: '95%',
 						marginLeft: 10,
 						marginRight: 10,
-						borderBottomColor: '#9E9E9E',
+						borderBottomColor: '#E0E0E0',
 						borderBottomWidth: 1,
-						color: '#616161',
-						marginBottom: 5
+						color: '#E0E0E0',
+						marginBottom: 5,
 					}}>Pasiekimai</Text>
-					<Grid>
-						<Row>
+					<View style={{
+						 flexDirection: 'row', justifyContent: 'flex-end', flex: 1
+					}}>
 							<Image style={{
 								width: 90,
 								height:  120,
-								resizeMode: 'stretch',
-								
+								resizeMode: 'stretch'
 								}}
 								source={require('../images/first_.png')}
 							/>
@@ -115,15 +138,17 @@ export default class user extends Component {
 								}}
 								source={require('../images/trophy_.png')}
 							/>
-						</Row>
+						</View>
 						<Text style={{marginBottom: 80}}>{"\n"}</Text>
-						<Row>
-							<InfoPanel title={"Taškai"} value={"0"} />
-							<InfoPanel title={"Iš eilės"} value={"0"} />
-						</Row>
-					</Grid>
+						<View style={{
+						 flexDirection: 'row', justifyContent: 'flex-end'
+					}}>
+							<InfoPanel title={"Taškai"} value={this.state.points} />
+							<InfoPanel title={"Iš eilės"} value={this.state.streak} />
+							</View>
+						
 				</View>
-            </View>
+			</View>
         );
     }
 }
@@ -137,6 +162,7 @@ const styles = StyleSheet.create({
 	image: {
 		width: win.width,
   	  	height: 265,
+		resizeMode: 'stretch'
 	},
 	progress: {
 		marginTop: 300

@@ -5,11 +5,12 @@ import {
 	Text,
 	View,
 	Alert,
-	Image
+	Image, Dimensions
 } from 'react-native';
 import AppIntro from 'react-native-app-intro';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
 
-
+const win = Dimensions.get("window");
 const styles = StyleSheet.create({
 	slide: {
 		flex: 1,
@@ -17,24 +18,26 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		backgroundColor: '#9DD6EB',
 		padding: 15,
+		paddingTop: 0
 	},
 	image: {
 		marginBottom: 15,
-		resizeMode: 'stretch',
 		width: 200,
 		height: 200,
 	},
 	name: {
 		color: '#fff',
-		fontSize: 30,
+		fontSize: responsiveFontSize(3.8),
 		fontWeight: 'bold',
 		bottom: 5,
+		width: win.width,
+		textAlign: 'center'
 	},
 	text: {
 		color: '#fff',
-		fontSize: 20,
+		fontSize: responsiveFontSize(1.8),
 		textAlign: 'justify',
-		width: 109 * 2.5,
+		width: win.width - 40,
 	}
 });
 
@@ -62,13 +65,14 @@ export default class Intro extends Component {
 				onSlideChange={this.onSlideChangeHandle}
 				doneBtnLabel='Baigti'
 				skipBtnLabel='Praleisti'
+				customStyles={{ controllText: { fontSize: responsiveFontSize(1.5) } }}
 			>
 			<View style={[styles.slide,{ backgroundColor: '#880e4f' }]}>
 				<Image style={styles.image} source={require('../images/happy2.png')} />
 				<View level={10}><Text style={styles.name}>Sveikiname!</Text></View>
 				<View level={10}><Text style={styles.text}>Jūs žengėte pirmą žingsnį tobulėjimo link. Šis trumpas gidas supažindins Jus su šia programėle.</Text></View>
 			</View>
-			<View style={[styles.slide, { backgroundColor: '#e64a19' }]}>
+			<View style={[styles.slide, { backgroundColor: '#1B5E20' }]}>
 				<Image style={styles.image} source={require('../images/books.png')} />
 				<View level={10}><Text style={styles.name}>Pritaikyta kiekvienam</Text></View>
 				<View level={10}><Text style={styles.text}>Nuo pradinuko iki pažengusio, mes esame pasirengę Jums padėti. Po šio gido galėsite pasirinkti savo anglų kalbos žinių lygį.</Text></View>
