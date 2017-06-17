@@ -47,10 +47,10 @@ export default class Intro extends Component {
 	};
 	
 	onSkipBtnHandle = (index) => {
-		this.props.navigation.navigate('Home');
+		this.props.navigation.navigate('Difficulty');
 	}
 	doneBtnHandle = () => {
-		this.props.navigation.navigate('Home');
+		this.props.navigation.navigate('Difficulty');
 	}
 	render(){
 		
