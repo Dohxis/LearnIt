@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 
 import { Container, Content, Button, StyleProvider } from 'native-base';
+import { responsiveFontSize } from 'react-native-responsive-dimensions';
+ 
 
 export default class Login extends Component {
     static navigationOptions = {
@@ -58,18 +60,18 @@ const styles_ = StyleSheet.create({
     text: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 38,
+        fontSize: responsiveFontSize(4),
         
         width: win.width,
-        marginLeft: win.width/9,
+        textAlign: 'center'
     },
     desc: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: responsiveFontSize(1.5),
         
         width: win.width,
-        marginLeft: win.width/4+15,
+        textAlign: 'center',
         marginBottom: 100,
     },
 });
