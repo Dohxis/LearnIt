@@ -43,7 +43,6 @@ export default class SecondLesson extends Component {
         this.setState({
             id: this.state.id + 1,
             user: "",
-            progress: this.state.progress + (1/6),
             current: words[this.state.id + 1].en
         });
     }
@@ -58,9 +57,12 @@ export default class SecondLesson extends Component {
         if(this.state.id === this.state.total_id)
             this.props.navigation.navigate('Lessons');
         else {
-            if(this.state.user == words[this.state.id].en)
+            if(this.state.user == words[this.state.id].en){
                 this.setNewWord();
-            else {
+                this.setState({
+                    progress: this.state.progress + (1/6),
+                });
+            } else {
                 Toast.show({
                     supportedOrientations: ['portrait','landscape'],
                     text: 'Neteisingai!',
@@ -71,7 +73,6 @@ export default class SecondLesson extends Component {
                 this.setState({
                     id: this.state.id,
                     user: "",
-                    progress: this.state.progress + (1/6),
                     current: words[this.state.id].en
                 });
             }
