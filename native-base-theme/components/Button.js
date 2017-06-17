@@ -266,7 +266,7 @@ export default (variables = variable) => {
     ".full": {
       justifyContent: "center",
       alignSelf: "stretch",
-      borderRadius: 0
+      borderRadius: 0,
     },
 
     ".rounded": {
