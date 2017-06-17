@@ -60,6 +60,7 @@ const buttonTheme = {
 };
 
 
+
 const noButtonTheme = {
 		'NativeBase.Button': {
 			bottom: 8,
@@ -73,6 +74,7 @@ const noButtonTheme = {
 			marginBottom: 0
 		}
 };
+
 
 
 export default class Learn extends Component {
