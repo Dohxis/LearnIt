@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Image, Text, View, StyleSheet, Dimensions, Alert} from 'react-native';
+import {Image, Text, View, StyleSheet, Dimensions, Alert, TouchableOpacity} from 'react-native';
 import { Container, Content, Button, StyleProvider } from 'native-base';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 import * as Progress from 'react-native-progress';
@@ -42,42 +42,39 @@ const styles = StyleSheet.create({
 		flex: 1,
 		paddingTop: 10,
 		fontSize: 20
+	},
+	buttonTheme: {
+		bottom: 8,
+		width: win.width - 10,
+		height: 50,
+		justifyContent: 'center',
+		alignItems: 'center',
+		paddingTop: 0,
+		borderColor: '#64dd17',
+		backgroundColor: '#388E3C',
+		marginBottom: 0
+	},
+	noButtonTheme: {
+		bottom: 8,
+		width: win.width - 10,
+		height: 50,
+		justifyContent: 'center',
+		alignItems: 'center',
+		paddingTop: 0,
+		borderColor: '#1d1b25',
+		backgroundColor: '#424242',
+		marginBottom: 0
 	}
 });
 
-const buttonTheme = {
-		'NativeBase.Button': {
-			bottom: 8,
-			width: win.width - 10,
-			height: 50,
-			justifyContent: 'center',
-			alignItems: 'center',
-			paddingTop: 0,
-			borderColor: '#64dd17',
-			backgroundColor: '#388E3C',
-			marginBottom: 0
-		}
-};
-
-const noButtonTheme = {
-		'NativeBase.Button': {
-			bottom: 8,
-			width: win.width - 10,
-			height: 50,
-			justifyContent: 'center',
-			alignItems: 'center',
-			paddingTop: 0,
-			borderColor: '#1d1b25',
-			backgroundColor: '#424242',
-			marginBottom: 0
-		}
-};
-
-
 
 export default class Learn extends Component {
+
+	returnTheme(){
+		return (this.props.done) ? buttonTheme : noButtonTheme;
+	}
+
 	render() {
-		console.warn(this.props.done);
 		return (
 			<Container>
 				<View style={styles.background}>
@@ -92,11 +89,9 @@ export default class Learn extends Component {
 
 					{this.props.children}
 
-					<StyleProvider style={(this.props.done) ? buttonTheme : noButtonTheme}>
-						<Button full onPress={() => this.props.fun()} disabled={!this.props.done}>
+						<TouchableOpacity style={(!this.props.done) ? styles.noButtonTheme : styles.buttonTheme} onPress={() => this.props.fun()} disabled={!this.props.done}>
 							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Toliau</Text>
-						</Button>
-					</StyleProvider>
+						</TouchableOpacity>
 				</View>
 			</Container>
 		);
