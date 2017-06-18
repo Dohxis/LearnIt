@@ -54,14 +54,15 @@ export default class SecondLesson extends Component {
     }
 
     checkNext(){
-        if(this.state.id === this.state.total_id)
-            this.props.navigation.navigate('Success');
-        else {
             if(this.state.user == words[this.state.id].en){
-                this.setNewWord();
-                this.setState({
-                    progress: this.state.progress + (1/6),
-                });
+				if(this.state.id === this.state.total_id)
+		            this.props.navigation.navigate('Success');
+				else{
+	                this.setNewWord();
+	                this.setState({
+	                    progress: this.state.progress + (1/6),
+	                });
+				}
             } else {
                 Toast.show({
                     supportedOrientations: ['portrait','landscape'],
@@ -76,7 +77,6 @@ export default class SecondLesson extends Component {
                     current: words[this.state.id].en
                 });
             }
-        }
     }
 
     render(){
@@ -95,7 +95,7 @@ export default class SecondLesson extends Component {
         return (
             <Learn fun={this.checkNext.bind(this)} title="Sudėliok" progress={this.state.progress} done={this.state.done}>
                 <Image
-                style={styles.image} 
+                style={styles.image}
                 source={words[this.state.id].image} />
                 <Text style={styles.name}>{words[this.state.id].lt.toUpperCase()}</Text>
                 <View style={{
@@ -153,9 +153,11 @@ const styles = StyleSheet.create({
         fontSize: responsiveFontSize(2),
         textAlign: 'center',
         backgroundColor: '#F4511E',
-				fontWeight: 'bold',
+		fontWeight: 'bold',
         borderRadius: 5,
         margin: 5,
+		paddingTop: 2,
+		justifyContent: 'center'
     }
 });
 
