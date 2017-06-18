@@ -155,6 +155,7 @@ const styles = StyleSheet.create({
 	buttonRight:{
 		margin: 5,
 		marginBottom: 3,
+		flex: 1,
 		width: win.width * 0.96,
 		borderRadius: 0,
 		borderWidth: 0,
@@ -162,6 +163,6 @@ const styles = StyleSheet.create({
 		borderColor: "#000000",
 		alignItems: "center",
 		justifyContent: "center",
-		height: 100
+		flexDirection: 'column'
 	}
 });
