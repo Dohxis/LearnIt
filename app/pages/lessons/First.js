@@ -12,6 +12,8 @@ import {
 import Learn from '../Learn';
 import words from './words';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
+import { Toast } from 'native-base';
+
 
 const randomWords = [
 		['Iki', 'Gamta', 'Labas', 'HackerGames'],
@@ -51,12 +53,30 @@ export default class FirstLesson extends Component {
 					done: true
 			});
 		}
+		else {
+			Toast.show({
+					supportedOrientations: ['portrait','landscape'],
+					text: 'Neteisingai!',
+					position: 'bottom',
+					type: 'danger',
+					duration: 2000
+			});
+		}
   	};
 
 	_onPress2() {
 		if(randomWords[this.state.id][1] == words[this.state.id].lt){
 		  	this.setState({
 					done: true
+			});
+		}
+		else {
+			Toast.show({
+					supportedOrientations: ['portrait','landscape'],
+					text: 'Neteisingai!',
+					position: 'bottom',
+					type: 'danger',
+					duration: 2000
 			});
 		}
 	};
@@ -67,12 +87,30 @@ export default class FirstLesson extends Component {
 					done: true
 			});
 		}
+		else {
+			Toast.show({
+					supportedOrientations: ['portrait','landscape'],
+					text: 'Neteisingai!',
+					position: 'bottom',
+					type: 'danger',
+					duration: 2000
+			});
+		}
   	};
 
 	_onPress4() {
 		if(randomWords[this.state.id][3] == words[this.state.id].lt){
 		  	this.setState({
 					done: true
+			});
+		}
+		else {
+			Toast.show({
+					supportedOrientations: ['portrait','landscape'],
+					text: 'Neteisingai!',
+					position: 'bottom',
+					type: 'danger',
+					duration: 2000
 			});
 		}
   	};
