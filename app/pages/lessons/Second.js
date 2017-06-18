@@ -95,7 +95,7 @@ export default class SecondLesson extends Component {
         return (
             <Learn fun={this.checkNext.bind(this)} title="Sudėliok" progress={this.state.progress} done={this.state.done}>
                 <Image 
-                style={{ width: 250, height: 250 }} 
+                style={styles.image} 
                 source={words[this.state.id].image} />
                 <Text style={styles.name}>{words[this.state.id].lt.toUpperCase()}</Text>
                 <View style={{
@@ -121,8 +121,8 @@ const styles = StyleSheet.create({
 		paddingTop: 0
 	},
 	image: {
-		marginBottom: 15,
-		width: 250,
+		marginBottom: 30,
+		width: win.width,
 		height: 250,
 	},
 	name: {
@@ -152,7 +152,8 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: responsiveFontSize(2),
         textAlign: 'center',
-        backgroundColor: '#BDBDBD',
+        backgroundColor: '#F4511E',
+				fontWeight: 'bold',
         borderRadius: 5,
         margin: 5,
     }
