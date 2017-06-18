@@ -21,7 +21,7 @@ class InfoPanel extends Component {
 						backgroundColor: '#E0E0E0',
 						margin: 10,
 						marginRight: 5,
-						padding: 10,
+						padding: 8,
 						textAlign: 'center',
 						borderRadius: 5
 					}}
@@ -108,31 +108,31 @@ export default class user extends Component {
 						 flexDirection: 'row', justifyContent: 'flex-end', flex: 1
 					}}>
 							<Image style={{
-								width: 90,
-								height:  120,
+								width: win.width / 4.1,
+								height:  win.width / 4.1 + 30,
 								resizeMode: 'stretch'
 								}}
 								source={require('../images/first_.png')}
 							/>
 							<Image style={{
-								width: 90,
-								height:  120,
+								width: win.width / 4.1,
+								height:  win.width / 4.1 + 30,
 								resizeMode: 'stretch',
 
 								}}
 								source={require('../images/some_.png')}
 							/>
 							<Image style={{
-								width: 90,
-								height:  120,
+								width: win.width / 4.1,
+								height:  win.width / 4.1 + 30,
 								resizeMode: 'stretch',
 
 								}}
 								source={require('../images/flag_.png')}
 							/>
 							<Image style={{
-								width: 90,
-								height:  120,
+								width: win.width / 4.1,
+								height:  win.width / 4.1 + 30,
 								resizeMode: 'stretch',
 
 								}}
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     },
 	image: {
 		width: win.width + 45,
-  	  	height: 337,
+  	  	height: win.height / 2 - 25,
 		resizeMode: 'stretch'
 	},
 	progress: {
