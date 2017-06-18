@@ -101,7 +101,7 @@ export default class FirstLesson extends Component {
             <Learn fun={this.checkNext.bind(this)} title="Pasirink" progress={this.state.progress} done={this.state.done}>
                 <Text style={styles.name}> {words[this.state.id].en.toUpperCase()} </Text>
 				<Image style={styles.image} source={words[this.state.id].image}/>
-				<View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
+				<View style={{flex: 1, flexDirection: 'column', flexWrap: 'wrap'}}>
 					<TouchableOpacity style={styles.buttonRight} onPress={this._onPress1.bind(this)}>
 						<Text style={styles.text}>{randomWords[this.state.id][0]}</Text>
 					</TouchableOpacity>
@@ -154,8 +154,9 @@ const styles = StyleSheet.create({
 	},
 	buttonRight:{
 		margin: 5,
-		width: 170,
-		height: 50,
+		marginBottom: 3,
+		flex: 1,
+		width: win.width * 0.96,
 		borderRadius: 0,
 		borderWidth: 0,
 		backgroundColor: "#D84315",
