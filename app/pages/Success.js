@@ -5,22 +5,31 @@ import {
   Text,
   Dimensions,
   Image,
-  Button,
   Alert,
   TouchableOpacity
 } from 'react-native';
 import Learn from './Learn';
 import words from './lessons/words';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
+import { Container, Content, Button, StyleProvider } from 'native-base';
+import * as Progress from 'react-native-progress';
 
-const randomWords = [
-		['Iki', 'Gamta', 'Labas', 'HackerGames'],
-		['Iki', 'Kelionė', 'Gerai', 'Miestas'],
-		['Žmogus', 'Aš', 'Moteris', 'Nuotaka'],
-		['Nuotrauka', 'Žmogus', 'Labas', 'Tu'],
-		['Herbas', 'Vyras', 'Vizitinė', 'Vardas'],
-		['Ačiū', 'Karas', 'Aš', 'Moteris']
-];
+const win = Dimensions.get('window');
+
+const buttonTheme = {
+		'NativeBase.Button': {
+			bottom: 8,
+			width: win.width - 10,
+			height: 50,
+			justifyContent: 'center',
+			alignItems: 'center',
+			paddingTop: 0,
+			borderColor: '#64dd17',
+			backgroundColor: '#388E3C',
+			marginBottom: 110,
+			marginTop: 80
+		}
+};
 
 export default class Success extends Component {
     static navigationOptions = {
@@ -48,22 +57,27 @@ export default class Success extends Component {
 
     render(){
         return (
-            <Learn fun={this.checkNext.bind(this)} title="Sveikiname!" progress={this.state.progress} done={this.state.done}>
-				<View style={styles.center}>
-					<Image style={styles.image} source={require('../images/icon.png')} />
-					<Text style={styles.text}> Jūs įveikėte šią pamoką </Text>
-				</View>
-            </Learn>
+			<View style={styles.center}>
+				<Image style={styles.image} source={require('../images/icon.png')} />
+				<Text style={styles.text}> Jūs įveikėte šią pamoką </Text>
+				<StyleProvider style={buttonTheme}>
+					<Button full onPress={() => this.checkNext()}>
+						<Text style={styles.buttonText}>Toliau</Text>
+					</Button>
+				</StyleProvider>
+			</View>
         );
     }
 }
 
-const win = Dimensions.get('window');
 const styles = StyleSheet.create({
 	center: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: win.width,
+		flex: 1,
+		alignItems: 'center',
+		backgroundColor: '#1d1b25',
 	},
 	text: {
 		color: '#fff',
@@ -78,6 +92,20 @@ const styles = StyleSheet.create({
 	image: {
 		width: win.width / 2,
 		height: win.width / 2,
-		marginBottom: 120
+		marginBottom: 120,
+		marginTop: 245,
+		top: 20
+	},
+	buttonText: {
+		color:'white',
+		flex: 1,
+		paddingTop: 10,
+		fontSize: 20
+	},
+	noButtonText: {
+		color:'#9E9E9E',
+		flex: 1,
+		paddingTop: 10,
+		fontSize: 20
 	}
 });

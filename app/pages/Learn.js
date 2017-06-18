@@ -47,38 +47,35 @@ const styles = StyleSheet.create({
 
 const buttonTheme = {
 		'NativeBase.Button': {
-			bottom: 10,
-			width: win.width - 40,
-			height: 60,
+			bottom: 8,
+			width: win.width - 10,
+			height: 50,
 			justifyContent: 'center',
 			alignItems: 'center',
-			paddingTop: 5,
+			paddingTop: 0,
 			borderColor: '#64dd17',
-			backgroundColor: 'green',
-			marginBottom: 5
+			backgroundColor: '#388E3C',
+			marginBottom: 0
 		}
 };
-
 
 const noButtonTheme = {
 		'NativeBase.Button': {
-			bottom: 10,
-			width: win.width - 40,
-			height: 60,
+			bottom: 8,
+			width: win.width - 10,
+			height: 50,
 			justifyContent: 'center',
 			alignItems: 'center',
-			paddingTop: 5,
+			paddingTop: 0,
 			borderColor: '#1d1b25',
 			backgroundColor: '#424242',
-			marginBottom: 5
+			marginBottom: 0
 		}
 };
 
 
+
 export default class Learn extends Component {
-
-
-
 	render() {
 
 		return (
@@ -95,7 +92,7 @@ export default class Learn extends Component {
 
 					{this.props.children}
 
-					<StyleProvider style={(!this.props.done) ? noButtonTheme : buttonTheme}>
+					<StyleProvider style={(!this.props.done) ? buttonTheme : noButtonTheme}>
 						<Button full onPress={() => this.props.fun()} disabled={!this.props.done}>
 							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Toliau</Text>
 						</Button>
