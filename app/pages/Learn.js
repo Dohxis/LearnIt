@@ -77,7 +77,7 @@ const noButtonTheme = {
 
 export default class Learn extends Component {
 	render() {
-
+		console.warn(this.props.done);
 		return (
 			<Container>
 				<View style={styles.background}>
@@ -92,7 +92,7 @@ export default class Learn extends Component {
 
 					{this.props.children}
 
-					<StyleProvider style={(!this.props.done) ? buttonTheme : noButtonTheme}>
+					<StyleProvider style={(this.props.done) ? buttonTheme : noButtonTheme}>
 						<Button full onPress={() => this.props.fun()} disabled={!this.props.done}>
 							<Text style={(!this.props.done) ? styles.noButtonText : styles.buttonText}>Toliau</Text>
 						</Button>
