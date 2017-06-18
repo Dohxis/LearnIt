@@ -13,6 +13,7 @@ import words from './lessons/words';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
 import { Container, Content, Button, StyleProvider } from 'native-base';
 import * as Progress from 'react-native-progress';
+import firebase from '../firebase';
 
 const win = Dimensions.get('window');
 
@@ -49,6 +50,18 @@ export default class Success extends Component {
 		};
 
 	checkNext(){
+		var ref = firebase.database();
+		var points = ref.ref("/points");
+		var streak = ref.ref("/streak");
+
+		points.once("value", function(snapshot) {
+			points.set(snapshot.val() + 10);
+		});
+
+		streak.once("value", function(snapshot) {
+			if(snapshot.val() == 0)
+				streak.set(1);
+		});
 		this.props.navigation.navigate('Lessons')
 	}
 
