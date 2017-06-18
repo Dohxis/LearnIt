@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
 	buttonRight:{
 		margin: 5,
 		width: 170,
-		height: 50,
+		height: win.height /11,
 		borderRadius: 0,
 		borderWidth: 0,
 		backgroundColor: "#D84315",
