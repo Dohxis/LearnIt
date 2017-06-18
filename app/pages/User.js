@@ -89,12 +89,12 @@ export default class user extends Component {
 	};
 	render() {
         return (
-			<View style={{backgroundColor: '#1d1b25'}}>
+			<View style={{backgroundColor: '#1d1b25', height: win.height, flex:1}}>
 				<View style={styles.center}>
 	                <Image style={styles.image} source={require('../components/img/two.png')} >
 					</Image>
 				</View>
-				<View>
+				<View style={{flex:1}}>
 					<Text style={{
 						width: '95%',
 						marginLeft: 10,
@@ -105,7 +105,7 @@ export default class user extends Component {
 						marginBottom: 5,
 					}}>Pasiekimai</Text>
 					<View style={{
-						 flexDirection: 'row', justifyContent: 'flex-end', flex: 1
+						 flexDirection: 'row', justifyContent: 'space-between', flex: 1
 					}}>
 							<Image style={{
 								width: win.width / 4.1,
