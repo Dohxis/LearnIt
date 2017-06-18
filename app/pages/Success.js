@@ -54,9 +54,13 @@ export default class Success extends Component {
 
 		render(){
 			return (
-				<View style={styles.center}>
-					<Image style={styles.image} source={require('../images/icon.png')} />
-					<Text style={styles.text}> Jūs įveikėte šią pamoką </Text>
+				<View style={styles.background}>
+					<View style={styles.center}>
+						<Image style={styles.image} source={require('../images/icon.png')} />
+						<Text style={styles.grats}> Sveikiname! </Text>
+						<Text style={styles.text}> Jūs surinkote 10 taškų ir įveikėte šią pamoką</Text>
+					</View>
+					
 					<StyleProvider style={buttonTheme}>
 						<Button full onPress={() => this.checkNext()}>
 							<Text style={styles.buttonText}>Toliau</Text>
@@ -68,22 +72,32 @@ export default class Success extends Component {
 }
 
 const styles = StyleSheet.create({
+	background: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: win.width,
+		backgroundColor: '#1d1b25',
+	},
 	center: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: win.width,
 		flex: 1,
 		alignItems: 'center',
-		backgroundColor: '#1d1b25',
 	},
-	text: {
+	grats: {
 		color: '#fff',
 		fontSize: 35,
 		fontWeight: "bold",
-		paddingBottom: 0,
-		paddingTop: 0,
-		alignItems: 'center',
-		justifyContent: 'center',
+		paddingTop: 20,
+		textAlign: 'center',
+	},
+	text: {
+		color: '#fff',
+		fontSize: 30,
+		paddingTop: 30,
+		textAlign: 'center',
 	},
 	image: {
 		width: win.width / 2,
