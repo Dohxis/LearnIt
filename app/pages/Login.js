@@ -8,7 +8,7 @@ import {
 
 import { Container, Content, Button, StyleProvider } from 'native-base';
 import { responsiveFontSize } from 'react-native-responsive-dimensions';
- 
+
 
 export default class Login extends Component {
     static navigationOptions = {
@@ -22,7 +22,7 @@ export default class Login extends Component {
 			<Container>
                 <Image style={styles_.backgroundImage} source={require('../images/login.png')}>
                     <Image style={styles_.logo} source={require('../images/logo.png')}></Image>
-                    <Text style={styles_.text}>PAVADINIMAS</Text>
+                    <Text style={styles_.text}>PRAKALBK</Text>
                     <Text style={styles_.desc}>Prisijunk ir išmok anglų kalbą!</Text>
                     <StyleProvider style={fbTheme}>
                         <Button full bordered rounded>
@@ -34,7 +34,7 @@ export default class Login extends Component {
                             <Text style={{color:'white', flex: 1, paddingTop: 10}}>Tęsti kaip svečias</Text>
                         </Button>
                     </StyleProvider>
-                </Image> 
+                </Image>
 			</Container>
 		);
 	}
@@ -61,7 +61,7 @@ const styles_ = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: responsiveFontSize(4),
-        
+
         width: win.width,
         textAlign: 'center'
     },
@@ -69,7 +69,7 @@ const styles_ = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: responsiveFontSize(1.5),
-        
+
         width: win.width,
         textAlign: 'center',
         marginBottom: 100,
@@ -80,7 +80,7 @@ const buttonTheme = {
     'NativeBase.Button': {
       marginBottom: 5,
       width: win.width - 20,
-      height: 60, 
+      height: 60,
       justifyContent: 'center',
       alignItems: 'center',
       paddingTop: 5,
@@ -93,7 +93,7 @@ const fbTheme = {
     'NativeBase.Button': {
       marginBottom: 5,
       width: win.width - 20,
-      height: 60, 
+      height: 60,
       justifyContent: 'center',
       alignItems: 'center',
       paddingTop: 5,
